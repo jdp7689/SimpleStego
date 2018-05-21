@@ -54,7 +54,7 @@ class PicEmbed(object):
                 pixel = ((pixel[0] & 0xfe | new_bit), pixel[1], pixel[2])
                 self.pix_array[self.current_height, self.current_width] = pixel
 
-        self.image.save(self.filename.split(".")[1] + "_new.png")
+        self.image.save(self.filename.split(".")[0] + "_new.png")
         print("Finished encoding")
 
     def _open_image(self):
